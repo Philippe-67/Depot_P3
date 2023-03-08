@@ -133,7 +133,7 @@
     <value>The price must be greater than zero</value>
   </data>
   <data name="StockNotAnInteger" xml:space="preserve">
-    <value>The value entered for the stock must be a integer</value>
+    <value>The value entered for the stock must be an integer</value>
   </data>
   <data name="StockNotGreaterThanZero" xml:space="preserve">
     <value>The stock must greater than zero</value>

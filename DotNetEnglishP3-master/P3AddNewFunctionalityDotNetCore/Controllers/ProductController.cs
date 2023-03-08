@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using P3AddNewFunctionalityDotNetCore.Models.Services;
 using P3AddNewFunctionalityDotNetCore.Models.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,6 +12,7 @@ namespace P3AddNewFunctionalityDotNetCore.Controllers
     {
         private readonly IProductService _productService;
         private readonly ILanguageService _languageService;
+      //  private object @object;
 
         public ProductController(IProductService productService, ILanguageService languageService)
         {
@@ -18,6 +20,7 @@ namespace P3AddNewFunctionalityDotNetCore.Controllers
             _languageService = languageService;
         }
 
+ 
         public IActionResult Index()
         {
             IEnumerable<ProductViewModel> products = _productService.GetAllProductsViewModel();
@@ -42,9 +45,12 @@ namespace P3AddNewFunctionalityDotNetCore.Controllers
         {
             List<string> modelErrors = _productService.CheckProductModelErrors(product);           
 
-            foreach (string error in modelErrors)
-            {
-                ModelState.AddModelError("", error);
+           // foreach (string error in modelErrors)
+              foreach (string error in modelErrors)
+
+                {
+                    ModelState.AddModelError("", error);
+               // Console.WriteLine(ModelState);          
             }
 
             if (ModelState.IsValid)
