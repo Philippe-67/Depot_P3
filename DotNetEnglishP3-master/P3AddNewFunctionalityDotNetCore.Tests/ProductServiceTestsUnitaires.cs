@@ -15,7 +15,7 @@ using Xunit;
 namespace P3AddNewFunctionalityDotNetCore.Tests //convention de nomage
 {
     //public class ProductViewModelValidationTests //convention de nomage
-    public class ProductServiceTests
+    public class ProductServiceTestsUnitaires
     {
         /// <summary>
         /// Take this test method as a template to write your test method.
